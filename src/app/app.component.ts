@@ -8,33 +8,20 @@ import { JeopardyService } from './jeopardy.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'app';
-
-  hasAnswered: boolean = false;
+  
   questionInfo;
-  playerAnswer: string;
-  playerTotal = 0;
 
-  constructor(private jeopardyService: JeopardyService){}
+  constructor(private jeopardyService: JeopardyService) {}
 
-  getDataFromService(){
-    this.hasAnswered = false;
-    this.jeopardyService.getQuestionInfo()
+  getDataFromService() {
+      this.jeopardyService.getQuestionInfo()
       .subscribe(
       questionInfo => {
+        
         this.questionInfo = questionInfo[0];
       }
       )
-  }
-
-
-  clickSubmit() {
-    if(this.playerAnswer == this.questionInfo.answer) {
-      this.playerTotal = this.playerTotal + this.questionInfo.value
     }
-    return this.playerTotal
-  }
-
   ngOnInit() {
     this.getDataFromService()
   }

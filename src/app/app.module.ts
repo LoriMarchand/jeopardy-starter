@@ -6,10 +6,12 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { JeopardyService } from './jeopardy.service';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
