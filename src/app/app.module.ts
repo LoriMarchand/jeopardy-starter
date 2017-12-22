@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
-import {JeopardyService } from './jeopardy.service';
+import { JeopardyService } from './jeopardy.service';
 
 @NgModule({
   declarations: [
@@ -11,7 +13,8 @@ import {JeopardyService } from './jeopardy.service';
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [
     JeopardyService
